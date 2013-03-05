@@ -1,5 +1,5 @@
 //
-//  FirstViewController.h
+//  DonateViewController.h
 //  MusicBrainz
 //
 //  Created by Hendrik Bruinsma on 04-03-13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController
+@interface DonateViewController : UIViewController
 
 @end

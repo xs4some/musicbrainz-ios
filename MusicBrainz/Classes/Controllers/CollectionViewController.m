@@ -1,25 +1,26 @@
 //
-//  FirstViewController.m
+//  CollectionViewController.m
 //  MusicBrainz
 //
 //  Created by Hendrik Bruinsma on 04-03-13.
 //  Copyright (c) 2013 xs4some. All rights reserved.
 //
 
-#import "FirstViewController.h"
+#import "CollectionViewController.h"
 
-@interface FirstViewController ()
+@interface CollectionViewController ()
 
 @end
 
-@implementation FirstViewController
+@implementation CollectionViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        self.title = NSLocalizedString(@"First", @"First");
-        self.tabBarItem.image = [UIImage imageNamed:@"first"];
+    if (self)
+    {
+        self.title = NSLocalizedString(@"COLLECTION_TITLE", @"Collection");
+        self.tabBarItem.image = [UIImage imageNamed:@"second"];
     }
     return self;
 }

@@ -1,5 +1,5 @@
 //
-//  SecondViewController.h
+//  CollectionViewController.h
 //  MusicBrainz
 //
 //  Created by Hendrik Bruinsma on 04-03-13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SecondViewController : UIViewController
+@interface CollectionViewController : UIViewController
 
 @end

@@ -7,21 +7,42 @@
 //
 
 #import "AppDelegate.h"
+#import "Const.h"
 
-#import "FirstViewController.h"
-
-#import "SecondViewController.h"
+#import "ScanViewController.h"
+#import "CollectionViewController.h"
+#import "DonateViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    
+    if ([[UINavigationBar class] respondsToSelector:@selector(appearance)])
+    {
+        NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:
+                                    UIColorFromRGB(kNavigationBarTextColour), UITextAttributeTextColor,
+                                    [UIColor clearColor], UITextAttributeTextShadowColor, nil];
+        
+        [[UIBarButtonItem appearance] setTitleTextAttributes: attributes forState: UIControlStateNormal];
+//        [[UINavigationBar appearance] setback
+
+    }
     // Override point for customization after application launch.
-    UIViewController *viewController1 = [[FirstViewController alloc] initWithNibName:@"FirstViewController" bundle:nil];
-    UIViewController *viewController2 = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];
+        
+    UIViewController *scanViewController = [[ScanViewController alloc] initWithNibName:@"ScanViewController" bundle:nil];
+    UIViewController *collectionViewController = [[CollectionViewController alloc] initWithNibName:@"CollectionViewController" bundle:nil];
+    UIViewController *donateViewController = [[DonateViewController alloc] initWithNibName:@"DonateViewController" bundle:nil];
+    
+    
+    UINavigationController *scanNavigationController = [[UINavigationController alloc] initWithRootViewController:scanViewController];
+    UINavigationController *collectionNavigationConroller = [[UINavigationController alloc] initWithRootViewController:collectionViewController];
+    UINavigationController *donateNavigationController = [[UINavigationController alloc] initWithRootViewController:donateViewController];
+    
     self.tabBarController = [[UITabBarController alloc] init];
-    self.tabBarController.viewControllers = @[viewController1, viewController2];
+    self.tabBarController.viewControllers = @[scanNavigationController, collectionNavigationConroller, donateNavigationController];
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
     return YES;
