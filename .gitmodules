@@ -1,0 +1,6 @@
+[submodule "MusicBrainz/Classes/Dependencies/MKNetworkKit"]
+	path = MusicBrainz/Classes/Dependencies/MKNetworkKit
+	url = https://github.com/MugunthKumar/MKNetworkKit.git
+[submodule "MusicBrainz/Classes/Dependencies/MBProgressHUD"]
+	path = MusicBrainz/Classes/Dependencies/MBProgressHUD
+	url = https://github.com/jdg/MBProgressHUD.git
