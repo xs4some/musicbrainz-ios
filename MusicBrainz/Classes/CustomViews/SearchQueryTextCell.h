@@ -8,6 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SearchQueryTextCell : UITableViewCell
+@class SearchQueryTextCell;
+
+@protocol SearchQueryTextCellDelegate <NSObject>
+
+@optional
+
+- (void)editDidFinish:(NSMutableDictionary *)result;
+
+@end
+
+@interface SearchQueryTextCell : UITableViewCell <SearchQueryTextCellDelegate>
+
+@property (nonatomic, retain) IBOutlet UITextField *textField;
+@property (nonatomic, retain) id <UITextFieldDelegate> delegate;
 
 @end
