@@ -8,9 +8,19 @@
 
 #import "BasicService.h"
 
+typedef enum
+{
+    SearchTypeArtist = 1,
+    SearchTypeLabel,
+    SearchTypeRecording,
+    SearchTypeRelease,
+    SearchTypeReleaseGroup,
+    SearchTypeWork
+} SearchType;
+
 @interface SearchService : BasicService
 
--(id)initServiceForSearchWithAnnotation:(NSDictionary *)annotation;
--(id)initServiceForSearchWithArtist:(NSDictionary *)artist;
+-(id)initServiceWithQuery:(NSDictionary *)query;
+-(void)getResultsOnCompletion:(void(^)(NSArray *results))completionBlock onError:(MKNKErrorBlock)errorBlock;
 
 @end
