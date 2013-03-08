@@ -1,5 +1,5 @@
 //
-//  ScanViewController.h
+//  SearchViewController.h
 //  MusicBrainz
 //
 //  Created by Hendrik Bruinsma on 04-03-13.
@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SearchQueryTextCell.h"
+#import "SearchService.h"
 
-@interface ScanViewController : UIViewController 
+@interface SearchViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, SearchQueryTextCellDelegate, UITextFieldDelegate, UIActionSheetDelegate>
+
+@property (nonatomic, retain) IBOutlet UITableView *tableView;
+@property (nonatomic, retain) NSArray *results;
+@property (nonatomic, assign) SearchType searchType;
 
 @end
