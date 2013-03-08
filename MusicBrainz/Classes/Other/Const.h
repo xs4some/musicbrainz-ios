@@ -15,7 +15,7 @@
 #define kClientId @"musicbrainz.ios-1.0"
 
 #define kNavigationBarColour 0x666633
-#define kNavigationBarTextColour 0x000000
+#define kNavigationBarTextColour 0xFFFFFF
 
 #define UIColorFromRGB(rgbValue) [UIColor \
 colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
