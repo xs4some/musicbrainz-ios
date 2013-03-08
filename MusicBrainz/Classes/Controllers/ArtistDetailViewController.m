@@ -35,4 +35,38 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - UITableView Delegate 
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 5;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *CellIdentifier = @"ArtistDetailCell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    if (cell == nil)
+    {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    }
+
+    switch (indexPath.row)
+    {
+        case 0:
+            cell.textLabel.text = @"Name";
+            cell.detailTextLabel.text = self.artist.name;
+            break;
+
+        default:
+            cell.textLabel.text = @"";
+            cell.detailTextLabel.text = @"";
+    }
+
+    return cell;
+}
+
 @end
