@@ -5,3 +5,48 @@
   Created by Hendrik Bruinsma on 06-03-13.
   Copyright (c) 2013 xs4some. All rights reserved.
 */
+
+/* General */
+
+"OK" = "Ok";
+"CANCEL" = "Cancel";
+"NO_CONNECTION" = "No internet connection available. Please try again later.";
+"HTTP_BADREQUEST" = "Something went wrong while connecting to the server, try again later.";
+"UNKNOWN_ERROR" = "Something went wrong while connecting to the server, try again later.";
+
+"ARTIST" = "Artist";
+
+
+/* Search View */
+
+"SEARCH_TITLE" = "Search";
+"SEARCH_DESCRIPTION" = "Enter search criteria";
+"SEARCH_RESULTS_NONE" = "Nothing found (yet)";
+"SEARCH_RESULTS_FOUND" = "Search results";
+"SEARCH_QUERY_PLACEHOLDER" = "Search query";
+"SEARCH_SCAN"  = "Scan barcode";
+"SEARCH_QUERY_TYPE" = "Query type";
+
+/* Search type Action sheet options */
+"SEARCH_ARTIST" = "Artist";
+"SEARCH_LABEL" = "Label";
+"SEARCH_RECORDING" = "Recording";
+"SEARCH_RELEASE" = "Release";
+"SEARCH_RELEASEGROUP" = "Release-Group";
+"SEARCH_WORK" = "Work";
+
+/* Collection View */
+
+"COLLECTION_TITLE" = "Collection";
+
+/* Donate View */
+
+"DONATE_TITLE" = "Donate";
+
+/* About View */
+
+"ABOUT_TITLE" = "About";
+
+/* Barcode scan view */
+
+"BARCODE_TITLE" = "Scan barcode";
