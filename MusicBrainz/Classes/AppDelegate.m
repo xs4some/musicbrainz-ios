@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "Const.h"
 
-#import "ScanViewController.h"
+#import "SearchViewController.h"
 #import "CollectionViewController.h"
 #import "DonateViewController.h"
 
@@ -19,6 +19,8 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
+    self.network = [[MKNetworkEngine alloc] initWithHostName:nil customHeaderFields:nil];
+    [self.network useCache];
     
     if ([[UINavigationBar class] respondsToSelector:@selector(appearance)])
     {
@@ -27,24 +29,21 @@
                                     [UIColor clearColor], UITextAttributeTextShadowColor, nil];
         
         [[UIBarButtonItem appearance] setTitleTextAttributes: attributes forState: UIControlStateNormal];
-//        [[UINavigationBar appearance] setback
-
     }
-    // Override point for customization after application launch.
-        
-    UIViewController *scanViewController = [[ScanViewController alloc] initWithNibName:@"ScanViewController" bundle:nil];
+
+    UIViewController *searchViewController = [[SearchViewController alloc] initWithNibName:@"SearchViewController" bundle:nil];
     UIViewController *collectionViewController = [[CollectionViewController alloc] initWithNibName:@"CollectionViewController" bundle:nil];
     UIViewController *donateViewController = [[DonateViewController alloc] initWithNibName:@"DonateViewController" bundle:nil];
-    
-    
-    UINavigationController *scanNavigationController = [[UINavigationController alloc] initWithRootViewController:scanViewController];
+
+    UINavigationController *searchNavigationController = [[UINavigationController alloc] initWithRootViewController:searchViewController];
     UINavigationController *collectionNavigationConroller = [[UINavigationController alloc] initWithRootViewController:collectionViewController];
     UINavigationController *donateNavigationController = [[UINavigationController alloc] initWithRootViewController:donateViewController];
     
     self.tabBarController = [[UITabBarController alloc] init];
-    self.tabBarController.viewControllers = @[scanNavigationController, collectionNavigationConroller, donateNavigationController];
+    self.tabBarController.viewControllers = @[searchNavigationController, collectionNavigationConroller, donateNavigationController];
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
+
     return YES;
 }
 

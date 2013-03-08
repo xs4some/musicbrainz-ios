@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MKNetworkKit.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
 @property (strong, nonatomic) UITabBarController *tabBarController;
+@property (nonatomic, strong) MKNetworkEngine *network;
 
 @end
