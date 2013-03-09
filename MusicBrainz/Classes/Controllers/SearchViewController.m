@@ -15,6 +15,7 @@
 #import "Release.h"
 #import "ReleaseGroup.h"
 #import "Work.h"
+#import "Const.h"
 
 @interface SearchViewController ()
 
@@ -32,8 +33,21 @@
     if (self)
     {
         self.title = NSLocalizedString(@"SEARCH_TITLE", @"Search");
+
+        // this will appear as the title in the navigation bar
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
+        label.backgroundColor = [UIColor clearColor];
+        label.font = [UIFont systemFontOfSize:18.0];
+        label.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.5];
+        label.textAlignment = UITextAlignmentCenter;
+        label.textColor = UIColorFromRGB(kNavigationBarTextColour);
+        self.navigationItem.titleView = label;
+        label.text = NSLocalizedString(@"SEARCH_TITLE", @"Search");
+        [label sizeToFit];
+
         self.tabBarItem.image = [UIImage imageNamed:@"magnifier"];
     }
+
     return self;
 }
 							
@@ -49,6 +63,9 @@
                                                                   action:@selector(searchWithBarcode:)];
 
     self.navigationItem.rightBarButtonItem = scanButton;
+
+    self.tableView.backgroundView = nil;
+    self.tableView.backgroundColor = UIColorFromRGB(0xFFBA58);
 }
 
 - (void)didReceiveMemoryWarning
