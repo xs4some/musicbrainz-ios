@@ -7,6 +7,9 @@
 //
 
 #import "ReleaseService.h"
+#import "Medium.h"
+#import "MediumService.h"
+#import "ArtistService.h"
 
 @implementation ReleaseService
 
@@ -44,20 +47,7 @@
 
     if ([dictionary objectForKey:@"media"])
     {
-        NSDictionary *media = [dictionary objectForKey:@"media"];
-
-        if ([media objectForKey:@"disc-count"])
-        {
-            release.discCount = [media objectForKey:@"disc-count"];
-        }
-        if ([media objectForKey:@"format"])
-        {
-            release.format = [media objectForKey:@"format"];
-        }
-        if ([media objectForKey:@"ended"])
-        {
-            release.trackCount = [media objectForKey:@"track-count"];
-        }
+        release.media = [MediumService mediaWithArray:[dictionary objectForKey:@"media"]];
     }
 
     if ([dictionary objectForKey:@"score"])
@@ -68,6 +58,24 @@
     if ([dictionary objectForKey:@"country"])
     {
         release.country = [dictionary objectForKey:@"country"];
+    }
+
+    if ([dictionary objectForKey:@"date"])
+    {
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+
+        release.date = [dateFormatter dateFromString:[dictionary objectForKey:@"date"]];
+    }
+
+    if ([dictionary objectForKey:@"release-group"])
+    {
+        release.releaseGroup = [dictionary objectForKey:@"release-group"];
+    }
+
+    if ([dictionary objectForKey:@"artist-credit"])
+    {
+        release.artists = [ArtistService artistsWithArray:[dictionary objectForKey:@"artist-credit"]];
     }
 
     return release;
