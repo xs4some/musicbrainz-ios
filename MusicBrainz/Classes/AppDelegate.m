@@ -25,10 +25,12 @@
     if ([[UINavigationBar class] respondsToSelector:@selector(appearance)])
     {
         NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:
-                                    UIColorFromRGB(kNavigationBarTextColour), UITextAttributeTextColor,
+                                    UIColorFromRGB(kNavigationBarButtonTextColour), UITextAttributeTextColor,
                                     [UIColor clearColor], UITextAttributeTextShadowColor, nil];
-        
-        [[UIBarButtonItem appearance] setTitleTextAttributes: attributes forState: UIControlStateNormal];
+
+//        [[UIBarButtonItem appearance] setTitleTextAttributes: attributes forState: UIControlStateNormal];
+        [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"NavigationBar.png"] forBarMetrics:UIBarMetricsDefault];
+//        [[UINavigationBar appearance] setBackgroundColor:UIColorFromRGB(kNavigationBarColour)];
     }
 
     UIViewController *searchViewController = [[SearchViewController alloc] initWithNibName:@"SearchViewController" bundle:nil];
