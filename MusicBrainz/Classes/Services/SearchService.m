@@ -104,7 +104,7 @@
         return [ArtistService artistsWithArray:[responseJSON objectForKey:@"artist"]];
     } else if ([responseJSON objectForKey:@"labels"])
     {
-        return [LabelService parseLabelsWithArray:[responseJSON objectForKey:@"labels"]];
+        return [LabelService labelsWithArray:[responseJSON objectForKey:@"labels"]];
     } else  if ([responseJSON objectForKey:@"recording"])
     {
         return [RecordingService recordingsWithArray:[responseJSON objectForKey:@"recording"]];

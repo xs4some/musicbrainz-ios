@@ -12,7 +12,7 @@
 @interface LabelService : BasicService
 
 
-+(NSArray *)parseLabelsWithArray:(NSArray *)array;
-+(Label *)parseLabelWithDictionary:(NSDictionary *)dictionary;
++(NSArray *)labelsWithArray:(NSArray *)array;
++(Label *)labelWithDictionary:(NSDictionary *)dictionary;
 
 @end

@@ -12,13 +12,13 @@
 
 @implementation LabelService
 
-+(NSArray *)parseLabelsWithArray:(NSArray *)array
++(NSArray *)labelsWithArray:(NSArray *)array
 {
     NSMutableArray *results = [[NSMutableArray alloc] init];
 
     for (NSDictionary *dictionary in array)
     {
-        Label *label = [LabelService parseLabelWithDictionary:dictionary];
+        Label *label = [LabelService labelWithDictionary:dictionary];
 
         if (label)
         {
@@ -29,9 +29,9 @@
     return results;
 }
 
-+(Label *)parseLabelWithDictionary:(NSDictionary *)dictionary
++(Label *)labelWithDictionary:(NSDictionary *)dictionary
 {
-    if (![dictionary objectForKey:@"id"] || ![dictionary objectForKey:@"label"])
+    if (![dictionary objectForKey:@"id"] || ![dictionary objectForKey:@"name"])
     {
 #if DEBUG
         NSLog(@"Missing elements in response");
