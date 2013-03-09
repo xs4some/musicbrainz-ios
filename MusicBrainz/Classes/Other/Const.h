@@ -23,8 +23,9 @@
 #define kWebServiceReleaseGroup @"release-group"
 #define kWebServiceWork @"work"
 
-#define kNavigationBarColour 0x666633
-#define kNavigationBarTextColour 0xFFFFFF
+#define kNavigationBarColour 0x5E5786
+#define kNavigationBarTextColour 0xFFBA58
+#define kNavigationBarButtonTextColour 0xFFBA58
 
 #define UIColorFromRGB(rgbValue) [UIColor \
 colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
