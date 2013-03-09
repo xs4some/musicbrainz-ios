@@ -14,6 +14,15 @@
 #define kUserAgent @"[musicbrainz]:[iPhone]:[%@]:[%d]"
 #define kClientId @"musicbrainz.ios-1.0"
 
+#define kWebServiceRoot @"http://musicbrainz.org/ws/2/"
+#define kWebServiceAnnotation @"annotation"
+#define kWebServiceArtist @"artist"
+#define kWebServiceLabel @"label"
+#define kWebServiceRecording @"recording"
+#define kWebServiceRelease @"release"
+#define kWebServiceReleaseGroup @"release-group"
+#define kWebServiceWork @"work"
+
 #define kNavigationBarColour 0x666633
 #define kNavigationBarTextColour 0xFFFFFF
 

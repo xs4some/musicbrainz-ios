@@ -7,6 +7,7 @@
 //
 
 #import "ArtistDetailViewController.h"
+#import "ArtistService.h"
 
 @interface ArtistDetailViewController ()
 
@@ -26,7 +27,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+
+    ArtistService *artistService = [[ArtistService alloc] initServiceWithArtistId:self.artist.artistId andParams:nil];
+
+    [artistService getArtistOnCompletion:^(Artist *artist)
+    {
+        self.artist = artist;
+        [self.tableView reloadData];
+    } onError:^(NSError *error)
+    {
+
+    }];
+
 }
 
 - (void)didReceiveMemoryWarning

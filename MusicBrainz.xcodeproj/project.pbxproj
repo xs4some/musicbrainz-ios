@@ -7,12 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		205BF2511CF9B688CACCF97A /* ArtistService.m in Sources */ = {isa = PBXBuildFile; fileRef = 205BF047FE92B1AD020F604E /* ArtistService.m */; };
 		205BF26E12B2DCB86E04DCB0 /* Recording.m in Sources */ = {isa = PBXBuildFile; fileRef = 205BFF7641BAA9AB1482B2BB /* Recording.m */; };
 		205BF310ABFDCE8BA44D7960 /* ReleaseGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 205BFA01DF0D12B12CC044C4 /* ReleaseGroup.m */; };
+		205BF5C3BAD157384A8BF78F /* ReleaseGroupService.m in Sources */ = {isa = PBXBuildFile; fileRef = 205BFB46674D091DE1396403 /* ReleaseGroupService.m */; };
+		205BF728B756DB1E87C3483F /* ReleaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = 205BF6B8AE6AD8AC4A20B033 /* ReleaseService.m */; };
 		205BF8C5B205D960EB3BC6C1 /* Label.m in Sources */ = {isa = PBXBuildFile; fileRef = 205BF9251C39534F1C787385 /* Label.m */; };
+		205BFB1167E7415A09690029 /* WorkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 205BFCE406A9F14C0BCA9C95 /* WorkService.m */; };
+		205BFC2FB042DB5A1D077EBE /* LabelService.m in Sources */ = {isa = PBXBuildFile; fileRef = 205BF20BDE664500F0B656C1 /* LabelService.m */; };
 		205BFD1051A608647AB2AFDE /* BarcodeScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 205BFCC2955C4BDDE7871836 /* BarcodeScanViewController.m */; };
 		205BFD12B937D11A9DF1FB95 /* Work.m in Sources */ = {isa = PBXBuildFile; fileRef = 205BF620700DB494813DA0D7 /* Work.m */; };
 		205BFD921854B7EC97F76EED /* Release.m in Sources */ = {isa = PBXBuildFile; fileRef = 205BFA0472E2DDC77B55C4CC /* Release.m */; };
+		205BFF3A05069CF6C0E9CC15 /* RecordingService.m in Sources */ = {isa = PBXBuildFile; fileRef = 205BF5B97AD65DF34CB5F225 /* RecordingService.m */; };
 		6218A3D616E46E870080271B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6218A3D516E46E870080271B /* UIKit.framework */; };
 		6218A3D816E46E870080271B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6218A3D716E46E870080271B /* Foundation.framework */; };
 		6218A3DA16E46E870080271B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6218A3D916E46E870080271B /* CoreGraphics.framework */; };
@@ -60,16 +66,28 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		205BF047FE92B1AD020F604E /* ArtistService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtistService.m; sourceTree = "<group>"; };
 		205BF083209494E7CCCC0246 /* Label.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Label.h; path = Model/Label.h; sourceTree = "<group>"; };
+		205BF1712F28D277669F43E4 /* ReleaseGroupService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReleaseGroupService.h; sourceTree = "<group>"; };
+		205BF20BDE664500F0B656C1 /* LabelService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelService.m; sourceTree = "<group>"; };
+		205BF3CAFC954DCB94BEFC16 /* LabelService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelService.h; sourceTree = "<group>"; };
 		205BF51E3CEA96A200738E8E /* Release.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Release.h; path = Model/Release.h; sourceTree = "<group>"; };
+		205BF5B97AD65DF34CB5F225 /* RecordingService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordingService.m; sourceTree = "<group>"; };
 		205BF620700DB494813DA0D7 /* Work.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Work.m; path = Model/Work.m; sourceTree = "<group>"; };
 		205BF65860AC954BE8DFED8A /* Recording.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Recording.h; path = Model/Recording.h; sourceTree = "<group>"; };
+		205BF660FB5A08125A95173D /* WorkService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WorkService.h; path = Services/WorkService.h; sourceTree = "<group>"; };
+		205BF6B8AE6AD8AC4A20B033 /* ReleaseService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReleaseService.m; path = Services/ReleaseService.m; sourceTree = "<group>"; };
 		205BF9251C39534F1C787385 /* Label.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Label.m; path = Model/Label.m; sourceTree = "<group>"; };
 		205BF976ED154B817334CE19 /* BarcodeScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarcodeScanViewController.h; sourceTree = "<group>"; };
+		205BF9DFF8A7630FAA7B1DF7 /* RecordingService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordingService.h; sourceTree = "<group>"; };
 		205BFA01DF0D12B12CC044C4 /* ReleaseGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReleaseGroup.m; path = Model/ReleaseGroup.m; sourceTree = "<group>"; };
 		205BFA0472E2DDC77B55C4CC /* Release.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Release.m; path = Model/Release.m; sourceTree = "<group>"; };
+		205BFA98B60E8AE387739D72 /* ArtistService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtistService.h; sourceTree = "<group>"; };
+		205BFB46674D091DE1396403 /* ReleaseGroupService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReleaseGroupService.m; sourceTree = "<group>"; };
 		205BFCC2955C4BDDE7871836 /* BarcodeScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarcodeScanViewController.m; sourceTree = "<group>"; };
+		205BFCE406A9F14C0BCA9C95 /* WorkService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WorkService.m; path = Services/WorkService.m; sourceTree = "<group>"; };
 		205BFD69F5777C29F80E09CF /* Work.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Work.h; path = Model/Work.h; sourceTree = "<group>"; };
+		205BFF18F31BB1359A1308BD /* ReleaseService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReleaseService.h; path = Services/ReleaseService.h; sourceTree = "<group>"; };
 		205BFF7641BAA9AB1482B2BB /* Recording.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Recording.m; path = Model/Recording.m; sourceTree = "<group>"; };
 		205BFFADA54CE0D4EE9B145B /* ReleaseGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReleaseGroup.h; path = Model/ReleaseGroup.h; sourceTree = "<group>"; };
 		6218A3D216E46E870080271B /* MusicBrainz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicBrainz.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -223,6 +241,10 @@
 				205BFFADA54CE0D4EE9B145B /* ReleaseGroup.h */,
 				205BFD69F5777C29F80E09CF /* Work.h */,
 				205BF620700DB494813DA0D7 /* Work.m */,
+				205BF6B8AE6AD8AC4A20B033 /* ReleaseService.m */,
+				205BFF18F31BB1359A1308BD /* ReleaseService.h */,
+				205BFCE406A9F14C0BCA9C95 /* WorkService.m */,
+				205BF660FB5A08125A95173D /* WorkService.h */,
 			);
 			name = Classes;
 			path = MusicBrainz/Classes;
@@ -261,6 +283,14 @@
 				6218A48616E486490080271B /* BasicService.m */,
 				6218A4ED16E6192B0080271B /* SearchService.h */,
 				6218A4EE16E6192B0080271B /* SearchService.m */,
+				205BF047FE92B1AD020F604E /* ArtistService.m */,
+				205BFA98B60E8AE387739D72 /* ArtistService.h */,
+				205BF5B97AD65DF34CB5F225 /* RecordingService.m */,
+				205BF9DFF8A7630FAA7B1DF7 /* RecordingService.h */,
+				205BF20BDE664500F0B656C1 /* LabelService.m */,
+				205BF3CAFC954DCB94BEFC16 /* LabelService.h */,
+				205BFB46674D091DE1396403 /* ReleaseGroupService.m */,
+				205BF1712F28D277669F43E4 /* ReleaseGroupService.h */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -499,6 +529,12 @@
 				205BFD921854B7EC97F76EED /* Release.m in Sources */,
 				205BF310ABFDCE8BA44D7960 /* ReleaseGroup.m in Sources */,
 				205BFD12B937D11A9DF1FB95 /* Work.m in Sources */,
+				205BF2511CF9B688CACCF97A /* ArtistService.m in Sources */,
+				205BFF3A05069CF6C0E9CC15 /* RecordingService.m in Sources */,
+				205BFC2FB042DB5A1D077EBE /* LabelService.m in Sources */,
+				205BF728B756DB1E87C3483F /* ReleaseService.m in Sources */,
+				205BF5C3BAD157384A8BF78F /* ReleaseGroupService.m in Sources */,
+				205BFB1167E7415A09690029 /* WorkService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -32,5 +32,9 @@ typedef enum {
 @property (nonatomic, retain) NSDate *lifeSpanBegin;
 @property (nonatomic, retain) NSDate *lifeSpanEnd;
 @property (nonatomic, assign) BOOL lifeSpanEnded;
+@property (nonatomic, retain) NSArray *recordings;
+@property (nonatomic, retain) NSArray *releaseGroups;
+@property (nonatomic, retain) NSArray *releases;
+@property (nonatomic, retain) NSArray *works;
 
 @end
