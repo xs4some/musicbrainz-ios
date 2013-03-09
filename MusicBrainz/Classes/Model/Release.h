@@ -6,9 +6,8 @@
 //  Copyright (c) 2013 xs4some. All rights reserved.
 //
 
-
 #import <Foundation/Foundation.h>
-
+#import "ReleaseGroup.h"
 
 @interface Release : NSObject
 
@@ -19,5 +18,9 @@
 @property (nonatomic, retain) NSNumber *trackCount;
 @property (nonatomic, retain) NSString *country;
 @property (nonatomic, retain) NSNumber *score;
+@property (nonatomic, retain) NSArray *media;
+@property (nonatomic, retain) NSDate *date;
+@property (nonatomic, retain) ReleaseGroup *releaseGroup;
+@property (nonatomic, retain) NSArray *artists;
 
 @end
