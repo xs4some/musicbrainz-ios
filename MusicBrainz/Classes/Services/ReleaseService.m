@@ -78,6 +78,21 @@
         release.artists = [ArtistService artistsWithArray:[dictionary objectForKey:@"artist-credit"]];
     }
 
+    if ([dictionary objectForKey:@"packaging"])
+    {
+        release.packaging = [dictionary objectForKey:@"packaging"];
+    }
+
+    if ([dictionary objectForKey:@"status"])
+    {
+        release.status = [dictionary objectForKey:@"status"];
+    }
+
+    if ([dictionary objectForKey:@"quality"])
+    {
+        release.quality = [dictionary objectForKey:@"quality"];
+    }
+
     return release;
 }
 

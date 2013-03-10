@@ -22,5 +22,8 @@
 @property (nonatomic, retain) NSDate *date;
 @property (nonatomic, retain) ReleaseGroup *releaseGroup;
 @property (nonatomic, retain) NSArray *artists;
+@property (nonatomic, retain) NSString *packaging;
+@property (nonatomic, retain) NSString *status;
+@property (nonatomic, retain) NSString *quality;
 
 @end
