@@ -9,8 +9,12 @@
 
 #import "BasicService.h"
 #import "Release.h"
+#import "Const.h"
 
 @interface ReleaseService : BasicService
+
+-(id)initServiceWithReleaseId:(NSString *)releaseId andParams:(NSMutableDictionary *)params;
+-(void)getReleaseOnCompletion:(void(^)(Release *release))completionBlock onError:(MKNKErrorBlock)errorBlock;
 
 +(NSArray *)releasesWithArray:(NSArray *)array;
 +(Release *)releaseWithDictionary:(NSDictionary *)dictionary;

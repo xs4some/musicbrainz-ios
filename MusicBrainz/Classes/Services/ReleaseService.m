@@ -10,8 +10,57 @@
 #import "Medium.h"
 #import "MediumService.h"
 #import "ArtistService.h"
+#import "AppDelegate.h"
 
 @implementation ReleaseService
+
+-(id)initServiceWithReleaseId:(NSString *)releaseId andParams:(NSMutableDictionary *)params
+{
+    if (params == nil)
+    {
+        params = [NSMutableDictionary dictionaryWithDictionary: @{@"inc":@"recordings+release-groups"}];
+    }
+    NSString *serviceURL = [NSString stringWithFormat:@"%@%@/%@", kWebServiceRoot, kWebServiceRelease, releaseId];
+
+    self = [self initServiceWithURL:serviceURL params:params method:HTTPGET];
+
+    return self;
+}
+
+-(void)getReleaseOnCompletion:(void(^)(Release *release))completionBlock onError:(MKNKErrorBlock)errorBlock
+{
+    [self addCompletionHandler:^(MKNetworkOperation *completedOperation)
+    {
+        if (![completedOperation isCachedResponse])
+        {
+            NSLog(@"%@", completedOperation.responseJSON);
+
+            if (completedOperation.responseJSON)
+            {
+                if ([completedOperation.responseJSON isKindOfClass:[NSDictionary class]])
+                {
+                    completionBlock([ReleaseService releaseWithDictionary:completedOperation.responseJSON]);
+                } else
+                {
+                    NSError *error = [[NSError alloc] initWithDomain:nil code:HTTPSERVERERROR userInfo:nil];
+                    errorBlock(error);
+                }
+            } else
+            {
+                // TODO: Add iOS 4.3 support with SBJSON
+                NSError *error = [[NSError alloc] initWithDomain:nil code:HTTPSERVERERROR userInfo:nil];
+                errorBlock(error);
+            }
+
+        }
+    } errorHandler:^(MKNetworkOperation *completedOperation, NSError *error)
+    {
+        errorBlock(error);
+    }];
+
+    [ApplicationDelegate.network enqueueOperation:self forceReload:YES];
+}
+
 
 +(NSArray *)releasesWithArray:(NSArray *)array
 {
