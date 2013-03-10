@@ -16,6 +16,7 @@
 #import "ReleaseGroup.h"
 #import "Work.h"
 #import "Const.h"
+#import "ReleaseDetailViewController.h"
 
 @interface SearchViewController ()
 
@@ -251,11 +252,11 @@
     
     if (indexPath.section == 1)
     {
-        ArtistDetailViewController *artistDetailViewController = [[ArtistDetailViewController alloc] initWithNibName:@"ArtistDetailViewController" bundle:nil];
-
         if ([[self.results objectAtIndex:indexPath.row] isKindOfClass:[Artist class]])
         {
             Artist *artist = [self.results objectAtIndex:indexPath.row];
+
+            ArtistDetailViewController *artistDetailViewController = [[ArtistDetailViewController alloc] initWithNibName:@"ArtistDetailViewController" bundle:nil];
             [artistDetailViewController setTitle:artist.name];
             [artistDetailViewController setArtist:artist];
 
@@ -268,7 +269,13 @@
             Recording *recording = [self.results objectAtIndex:indexPath.row];
         } else if ([[self.results objectAtIndex:indexPath.row] isKindOfClass:[Release class]])
         {
-            Release *release = [self.results objectAtIndex:indexPath.row];
+            Release *release_ = [self.results objectAtIndex:indexPath.row];
+
+            ReleaseDetailViewController *releaseDetailViewController = [[ReleaseDetailViewController alloc] initWithNibName:@"ReleaseDetailViewController" bundle:nil];
+            [releaseDetailViewController setTitle:release_.title];
+            [releaseDetailViewController setRelease_:release_];
+
+            [self.navigationController pushViewController:releaseDetailViewController animated:YES];
         } else if ([[self.results objectAtIndex:indexPath.row] isKindOfClass:[ReleaseGroup class]])
         {
             ReleaseGroup *releaseGroup = [self.results objectAtIndex:indexPath.row];
