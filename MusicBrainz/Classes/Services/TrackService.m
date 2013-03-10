@@ -59,6 +59,8 @@
     {
         track.artists = [ArtistService artistsWithArray:[dictionary objectForKey:@"artist-credit"]];
     }
+
+    return track;
 }
 
 @end
