@@ -33,7 +33,7 @@
     if (![dictionary objectForKey:@"id"] || ![dictionary objectForKey:@"title"])
     {
 #if DEBUG
-        NSLog(@"Missing elements in response");
+        NSLog(@"Work: Missing elements in response\n%@", dictionary);
 #endif
         return nil;
     }

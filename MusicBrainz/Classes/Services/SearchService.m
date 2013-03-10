@@ -90,9 +90,6 @@
 
 +(NSArray *)parseResultsWithJSON:(id)responseJSON
 {
-#if DEBUG
-    NSLog(@"%@", responseJSON);
-#endif
 
     if (![responseJSON isKindOfClass:[NSDictionary class]])
     {

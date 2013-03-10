@@ -37,7 +37,7 @@
             ![dictionary objectForKey:@"number"])
     {
 #if DEBUG
-        NSLog(@"Missing elements!");
+        NSLog(@"Track: Missing elements in response\n%@", dictionary);
 #endif
         return nil;
     }

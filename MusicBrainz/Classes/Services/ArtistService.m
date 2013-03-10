@@ -90,12 +90,10 @@
     if (![dictionary objectForKey:@"id"] || ![dictionary objectForKey:@"name"])
     {
 #if DEBUG
-        NSLog(@"Missing elements in response");
+        NSLog(@"artist: Missing elements in response\n%@", dictionary);
 #endif
         return nil;
     }
-
-    NSLog(@"%@", dictionary);
 
     Artist *artist = [[Artist alloc] init];
 
