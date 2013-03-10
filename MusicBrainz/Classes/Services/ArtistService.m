@@ -74,7 +74,14 @@
 
     for (NSDictionary *dictionary in array)
     {
-        Artist *artist = [ArtistService artistWithDictionary:dictionary];
+        Artist *artist = nil;
+        if ([dictionary objectForKey:@"artist"])
+        {
+            artist = [ArtistService artistWithDictionary:[dictionary objectForKey:@"artist"]];
+        } else
+        {
+            artist = [ArtistService artistWithDictionary:dictionary];
+        }
 
         if (artist)
         {
